@@ -3,57 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ceuta No Se Apaga | 5 de Noviembre de 2026 · Señal en Espera</title>
+  <title>Ceuta No Se Apaga</title>
   
-  <!-- SEO & Metatags -->
-  <meta name="description" content="Ceuta No Se Apaga. Convocatoria cívica, solemne, estática y en absoluto silencio el 5 de noviembre a las 20:00 h en la Plaza de los Reyes (Ceuta). Señal en espera.">
-  <meta name="keywords" content="Ceuta No Se Apaga, Ceuta 5 de Noviembre, Plaza de los Reyes, silencio civico, concentracion pacifica Ceuta, manifiesto">
-  <meta name="author" content="Iniciativa Ciudadana Ceuta No Se Apaga">
-  <meta name="robots" content="index, follow">
+  <!-- SEO & Metatags minimalistas (sin pistas sobre el evento) -->
+  <meta name="description" content="Ceuta No Se Apaga. Frecuencia oficial.">
+  <meta name="robots" content="noindex, nofollow">
   <link rel="canonical" href="https://ceutanoseapaga.com">
 
-  <!-- OpenGraph / Redes Sociales -->
+  <!-- OpenGraph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ceutanoseapaga.com">
-  <meta property="og:title" content="Ceuta No Se Apaga | 05.11.2026 · Plaza de los Reyes">
-  <meta property="og:description" content="30 días para recordar quiénes somos. Un instante para que nos escuchen a todos. Frecuencia oficial en espera.">
-  <meta property="og:image" content="assets/portada_v2.jpg">
+  <meta property="og:title" content="Ceuta No Se Apaga">
+  <meta property="og:description" content="Ceuta No Se Apaga.">
 
-  <!-- Twitter Cards -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Ceuta No Se Apaga | 05.11 · Plaza de los Reyes">
-  <meta name="twitter:description" content="Concentración solemne, estática y en absoluto silencio. 5 de noviembre a las 20:00 h.">
-  <meta name="twitter:image" content="assets/portada_v2.jpg">
-
-  <!-- Favicon SVG con la silueta de la máscara -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23050505'/%3E%3Cpath d='M50 15 C30 15 20 30 20 50 C20 72 35 88 50 92 C65 88 80 72 80 50 C80 30 70 15 50 15 Z' fill='%23F5F5F5'/%3E%3Ccircle cx='36' cy='42' r='4' fill='%23050505'/%3E%3Ccircle cx='64' cy='42' r='4' fill='%23050505'/%3E%3Cpath d='M30 62 Q50 80 70 62' stroke='%23050505' stroke-width='4' fill='none'/%3E%3Cpath d='M40 55 Q50 62 60 55' stroke='%239E1B1B' stroke-width='3' fill='none'/%3E%3C/svg%3E">
+  <!-- Favicon SVG sutil -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23050505'/%3E%3Ccircle cx='50' cy='50' r='12' fill='%239E1B1B'/%3E%3C/svg%3E">
 
   <!-- Hojas de Estilo -->
   <link rel="stylesheet" href="css/design-system.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/teaser.css">
 </head>
-<body>
+<body class="teaser-body">
 
   <!-- Capas Atmosféricas Cinemáticas (CRT Scanlines y Grano Analógico) -->
   <div class="crt-overlay" aria-hidden="true"></div>
   <div class="film-grain" aria-hidden="true"></div>
 
-  <!-- A. BARRA DE NAVEGACIÓN (HEADER FIJO BLUR) -->
-  <header class="site-header" id="site-header" role="banner">
-    <div class="container nav-container">
-      <!-- Brand Logo -->
-      <a href="#" class="brand-logo" aria-label="Inicio Ceuta No Se Apaga">
-        <img src="assets/mask_icon.png" alt="Máscara oficial de Ceuta No Se Apaga" class="brand-mask-icon" width="38" height="50">
+  <!-- BARRA DE NAVEGACIÓN MINIMALISTA -->
+  <header class="site-header teaser-nav" id="site-header" role="banner">
+    <div class="container nav-container" style="justify-content: space-between;">
+      <!-- Brand Logo Tipográfico Puro (sin iconos que den pistas) -->
+      <a href="#" class="brand-logo" id="brand-logo-trigger" aria-label="Ceuta No Se Apaga">
+        <span class="brand-signal-dot" aria-hidden="true"></span>
         <div class="brand-info">
           <span class="brand-title">CEUTA NO SE APAGA</span>
-          <span class="brand-meta">05.11 // PLAZA DE LOS REYES</span>
+          <span class="brand-meta">SEÑAL EN ESPERA</span>
         </div>
       </a>
 
-      <!-- Acciones de Navegación -->
+      <!-- Acciones de Navegación: Sonido Ambiental -->
       <div class="nav-actions">
-        <!-- Control de Paisaje Sonoro Procedural (Web Audio API) -->
         <button type="button" class="btn-soundscape" id="btn-soundscape-toggle" aria-label="Activar o silenciar paisaje sonoro ambiental">
           <div class="soundscape-bars" aria-hidden="true">
             <span class="soundscape-bar"></span>
@@ -63,26 +53,21 @@
           </div>
           <span class="soundscape-label">Paisaje Sonoro</span>
         </button>
-
-        <!-- CTA Telegram Header -->
-        <a href="https://t.me/ceutanoseapaga" target="_blank" rel="noopener noreferrer" class="btn btn-nav-telegram">
-          <span>Canal Seguro</span>
-        </a>
       </div>
     </div>
   </header>
 
+  <!-- CONTENIDO PRINCIPAL ENIGMÁTICO Y MINIMALISTA -->
   <main id="main-content">
-    <!-- TEASER HERO SECTION -->
     <section class="teaser-hero" aria-labelledby="teaser-main-title">
       <div class="hero-backdrop" aria-hidden="true"></div>
       <canvas id="hero-canvas" aria-hidden="true"></canvas>
 
       <div class="container teaser-content">
-        <!-- Badge Superior -->
+        <!-- Indicador de señal en espera -->
         <div class="teaser-badge">
           <span class="teaser-badge-dot" aria-hidden="true"></span>
-          <span>FRECUENCIA EN ESPERA // EMISIÓN INMINENTE</span>
+          <span>SEÑAL EN ESPERA</span>
         </div>
 
         <!-- Titular Principal -->
@@ -90,182 +75,32 @@
           CEUTA NO SE <span>APAGA</span>
         </h1>
 
-        <!-- Cita Solemne de Impacto -->
-        <p class="teaser-tagline">
-          "Nos dijeron que vivir en la frontera es resignarse al olvido.<br>
-          Nos equivocamos al callar durante años, pero jamás olvidamos quiénes somos."
+        <!-- Divisor sutil carmesí -->
+        <div class="teaser-divider" aria-hidden="true">
+          <span class="divider-line"></span>
+          <span class="divider-gem"></span>
+          <span class="divider-line"></span>
+        </div>
+
+        <!-- Mensaje escueto e intrigante sin revelar fecha, lugar ni temática -->
+        <p class="teaser-status">
+          Próximamente
         </p>
 
-        <p class="teaser-desc">
-          El 5 de noviembre a las 20:00 h, la Plaza de los Reyes de Ceuta vivirá un acto cívico, solemne, estático y en absoluto silencio. La transmisión oficial con el manifiesto completo y la red de custodia se activará en esta frecuencia.
+        <p class="teaser-substatus">
+          Frecuencia en emisión de prueba.
         </p>
-
-        <!-- Contador Regresivo en Tiempo Real -->
-        <div class="countdown-wrapper" aria-label="Cuenta atrás para la hora cero">
-          <div class="countdown-header">
-            <div class="countdown-target">
-              <span class="countdown-target-dot" aria-hidden="true"></span>
-              <span>HORA CERO: 05 DE NOVIEMBRE DE 2026 · 20:00:00 CEST</span>
-            </div>
-            <div class="countdown-location">
-              PLAZA DE LOS REYES · CEUTA
-            </div>
-          </div>
-
-          <div class="countdown-grid">
-            <div class="countdown-card">
-              <span class="countdown-number" id="count-days">--</span>
-              <span class="countdown-label">Días</span>
-            </div>
-            <div class="countdown-card">
-              <span class="countdown-number" id="count-hours">--</span>
-              <span class="countdown-label">Horas</span>
-            </div>
-            <div class="countdown-card">
-              <span class="countdown-number" id="count-minutes">--</span>
-              <span class="countdown-label">Minutos</span>
-            </div>
-            <div class="countdown-card">
-              <span class="countdown-number" id="count-seconds">--</span>
-              <span class="countdown-label">Segundos</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Visual Previo 9:16 con Estado de Custodia -->
-        <div class="teaser-frame-box">
-          <div class="teaser-visual-container">
-            <img src="assets/portada_v2.jpg" alt="Figura con la máscara en los túneles históricos de Ceuta" class="teaser-visual-img" width="720" height="1280">
-
-            <div class="broadcast-hud-top">
-              <div class="rec-indicator">
-                <span class="rec-dot" aria-hidden="true"></span>
-                <span>SEÑAL EN ESPERA</span>
-              </div>
-              <div class="broadcast-meta">
-                <span>05.11 // CUSTODIA</span>
-              </div>
-            </div>
-
-            <div class="teaser-lock-overlay">
-              <div class="teaser-lock-badge">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" aria-hidden="true">
-                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                </svg>
-              </div>
-              <div class="teaser-lock-text">EMISIÓN BLOQUEADA TEMPORALMENTE</div>
-              <div class="teaser-lock-caption">
-                El manifiesto audiovisual y los cuadrantes de máscaras se liberarán antes de la concentración.
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Acciones Principales -->
-        <div class="teaser-actions">
-          <div class="teaser-buttons-group">
-            <a href="https://t.me/ceutanoseapaga" target="_blank" rel="noopener noreferrer" class="btn btn-telegram" style="padding: 15px 32px; font-size: 0.9rem;">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
-              </svg>
-              <span>SINTONIZAR CANAL EN TELEGRAM</span>
-            </a>
-
-            <button type="button" class="btn-lock-access btn-open-unlock" id="btn-open-unlock">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-              </svg>
-              <span>Acceso de Custodia</span>
-            </button>
-          </div>
-
-          <div style="font-family: var(--font-mono); font-size: 0.72rem; color: #666; margin-top: 4px;">
-            Atajo de organización: <kbd style="background: #111; padding: 2px 6px; border: 1px solid #333; border-radius: 3px; color: #AAA;">Ctrl + Shift + V</kbd>
-          </div>
-        </div>
       </div>
     </section>
   </main>
 
-  <!-- FOOTER DE LA LANDING DE ESPERA -->
-  <footer class="site-footer" role="contentinfo" style="padding-top: 40px;">
-    <div class="container">
-      <div class="footer-top" style="border-bottom: none; padding-bottom: 20px;">
-        <div class="footer-statement">
-          <div class="footer-statement-title">// DECLARACIÓN DE NEUTRALIDAD CÍVICA</div>
-          <p class="footer-statement-text">
-            Iniciativa ciudadana transversal sin vinculación institucional ni partidos políticos, amparada en los derechos fundamentales de reunión pacífica (Art. 21) y libre expresión de ideas (Art. 20) de la Constitución Española.
-          </p>
-          <div class="footer-privacy-badge">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2" aria-hidden="true">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-            </svg>
-            <span>Esta web respeta tu anonimato: Cero cookies, cero analíticas, cero almacenamiento de IP.</span>
-          </div>
-        </div>
-
-        <div class="footer-links-group">
-          <a href="mailto:prensa@ceutanoseapaga.com" class="footer-link">Contacto de Prensa: prensa@ceutanoseapaga.com</a>
-          <button type="button" class="footer-link btn-open-unlock" style="background: none; border: none; padding: 0; cursor: pointer;">
-            Desbloqueo de Frecuencia Oficial
-          </button>
-          <span style="font-family: var(--font-mono); font-size: 0.72rem; color: #666; margin-top: 8px;">
-            CEUTA · 2006 - 2026 // 20º ANIVERSARIO
-          </span>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <div>
-          © 2026 ASAMBLEA CIUDADANA CEUTA NO SE APAGA.
-        </div>
-        <div>
-          FRECUENCIA EN ESPERA · 05.11
-        </div>
-      </div>
+  <!-- PIE DE PÁGINA ULTRA-MINIMALISTA -->
+  <footer class="teaser-footer" role="contentinfo">
+    <div class="container teaser-footer-container">
+      <span class="teaser-copy" id="footer-secret-trigger">© 2026 CEUTA NO SE APAGA</span>
+      <span class="teaser-status-tag">// EMISIÓN 00.0</span>
     </div>
   </footer>
-
-  <!-- MODAL DE ACCESO DE CUSTODIA (DESBLOQUEO DE LA WEB PRINCIPAL) -->
-  <div class="modal-overlay" id="passcode-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="unlock-modal-title">
-    <div class="modal-window passcode-modal-card">
-      <div class="modal-header" style="background: transparent; border-bottom: none; padding: 0 0 16px;">
-        <div class="modal-title" id="unlock-modal-title" style="margin: 0 auto;">
-          <span class="rec-dot" aria-hidden="true"></span>
-          <span>ACCESO DE CUSTODIA // DESBLOQUEO</span>
-        </div>
-        <button type="button" class="btn-close-modal" id="btn-close-unlock" aria-label="Cerrar modal">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
-        </button>
-      </div>
-
-      <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6;">
-        Introduce la contraseña de la organización o haz clic para previsualizar la señal completa de la web:
-      </p>
-
-      <form id="unlock-form">
-        <input type="text" id="unlock-passcode-input" class="passcode-input" placeholder="INTRODUCE CONTRASEÑA" autocomplete="off" required>
-        
-        <div style="display: flex; gap: 10px; justify-content: center;">
-          <button type="submit" class="btn btn-primary" style="padding: 12px 24px; font-size: 0.82rem;">
-            Desbloquear Frecuencia
-          </button>
-          <a href="landing-completa.html" class="btn btn-outline" style="padding: 12px 20px; font-size: 0.82rem;">
-            Abrir Web Directa
-          </a>
-        </div>
-      </form>
-
-      <div style="margin-top: 18px; font-family: var(--font-mono); font-size: 0.72rem; color: #555;">
-        Pista de custodia: <em>LA ORILLA TAMBIÉN RECUERDA</em>
-      </div>
-    </div>
-  </div>
 
   <!-- Scripts Modulares -->
   <script src="js/soundscape.js"></script>
