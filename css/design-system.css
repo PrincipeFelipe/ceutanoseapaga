@@ -1,0 +1,321 @@
+/* ==========================================================================
+   SISTEMA DE DISEÑO & TOKENS GLOBALES // CEUTA NO SE APAGA (05.11)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Syne:wght@500;700;800&display=swap');
+
+:root {
+  /* --- PALETA DE COLOR CINEMATOGRÁFICA --- */
+  --bg-primary: #050505;
+  --bg-secondary: #0E0E0E;
+  --bg-surface: #141414;
+  --bg-surface-elevated: #1A1A1A;
+  --bg-overlay: rgba(5, 5, 5, 0.85);
+
+  --border-subtle: #222222;
+  --border-light: #333333;
+  --border-highlight: #444444;
+
+  --text-primary: #F5F5F5;
+  --text-secondary: #999999;
+  --text-muted: #666666;
+  --text-dark: #111111;
+
+  /* Rojo lacre carmesí distintivo */
+  --accent-crimson: #9E1B1B;
+  --accent-crimson-hover: #B82323;
+  --accent-crimson-glow: rgba(158, 27, 27, 0.45);
+  --accent-crimson-dim: rgba(158, 27, 27, 0.15);
+
+  /* Estados tácticos y LEDs */
+  --status-active-green: #10B981;
+  --status-active-green-glow: rgba(16, 185, 129, 0.45);
+  --status-depleted-red: #EF4444;
+  --status-depleted-red-glow: rgba(239, 68, 68, 0.35);
+
+  /* --- TIPOGRAFÍA --- */
+  --font-display: 'Bebas Neue', 'Syne', sans-serif;
+  --font-brand: 'Syne', sans-serif;
+  --font-serif: 'Cinzel', serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* --- ESPACIADO & ESTRUCTURA --- */
+  --container-max: 1280px;
+  --container-narrow: 900px;
+  --header-height: 76px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 14px;
+  --radius-pill: 9999px;
+
+  /* --- SOMBRAS & TRANSICIONES --- */
+  --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.6);
+  --shadow-crimson: 0 0 35px var(--accent-crimson-glow);
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Reset y caja */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + 20px);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  overflow-x: hidden;
+  position: relative;
+  line-height: 1.6;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: #252525;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-crimson);
+}
+
+/* Selección de texto */
+::selection {
+  background-color: var(--accent-crimson);
+  color: #FFFFFF;
+}
+
+/* Enlaces e imágenes */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img, svg, video {
+  display: block;
+  max-width: 100%;
+}
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  border: none;
+  background: none;
+  outline: none;
+}
+button {
+  cursor: pointer;
+}
+
+/* --- EFECTOS CRT Y VIÑETA CINEMATOGRÁFICA --- */
+.crt-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 999;
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%,
+    rgba(0, 0, 0, 0.25) 50%
+  ),
+  radial-gradient(
+    circle at center,
+    transparent 55%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+  background-size: 100% 3px, 100% 100%;
+  opacity: 0.7;
+}
+
+/* Efecto sutil de grano analógico */
+.film-grain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 998;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Contenedores */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.container-narrow {
+  width: 100%;
+  max-width: var(--container-narrow);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/* Tipografías auxiliares */
+.font-display { font-family: var(--font-display); }
+.font-serif { font-family: var(--font-serif); }
+.font-mono { font-family: var(--font-mono); }
+.font-brand { font-family: var(--font-brand); }
+
+/* Badges e insignias */
+.badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background-color: var(--accent-crimson-dim);
+  border: 1px solid var(--accent-crimson);
+  color: #FF7B7B;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+}
+
+.badge-tag::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: var(--accent-crimson);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--accent-crimson);
+}
+
+/* Títulos de sección */
+.section-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent-crimson);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+  color: var(--text-primary);
+}
+
+.section-subtitle {
+  color: var(--text-secondary);
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  max-width: 680px;
+  margin: 16px auto 0;
+  line-height: 1.7;
+}
+
+/* Botones con estilo distintivo */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background-color: var(--accent-crimson);
+  color: #FFFFFF;
+  border: 1px solid var(--accent-crimson-hover);
+  box-shadow: 0 4px 20px rgba(158, 27, 27, 0.4);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-crimson-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(184, 35, 35, 0.6);
+}
+
+.btn-outline {
+  background-color: rgba(20, 20, 20, 0.6);
+  color: var(--text-primary);
+  border: 1px solid var(--border-light);
+  backdrop-filter: blur(8px);
+}
+
+.btn-outline:hover {
+  border-color: var(--text-primary);
+  background-color: rgba(35, 35, 35, 0.8);
+  transform: translateY(-2px);
+}
+
+.btn-telegram {
+  background: linear-gradient(135deg, #1d252f 0%, #0e1319 100%);
+  border: 1px solid #2a82e4;
+  color: #FFFFFF;
+  box-shadow: 0 4px 25px rgba(42, 130, 228, 0.25);
+}
+
+.btn-telegram:hover {
+  background: linear-gradient(135deg, #243140 0%, #161e27 100%);
+  box-shadow: 0 8px 35px rgba(42, 130, 228, 0.45);
+  transform: translateY(-2px);
+}
+
+/* Animaciones de scroll */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Enfoque accesible */
+:focus-visible {
+  outline: 2px solid var(--accent-crimson);
+  outline-offset: 3px;
+}
