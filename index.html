@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ceuta No Se Apaga | 5 de Noviembre de 2026 - Convocatoria Cívica Silenciosa</title>
+  <title>Ceuta No Se Apaga | 5 de Noviembre de 2026 · Señal en Espera</title>
   
   <!-- SEO & Metatags -->
-  <meta name="description" content="Convocatoria cívica, solemne, estática y en absoluto silencio el 5 de noviembre a las 20:00 h en la Plaza de los Reyes (Ceuta). 20 años después, una sola voz silenciosa.">
-  <meta name="keywords" content="Ceuta No Se Apaga, Ceuta 5 de Noviembre, Plaza de los Reyes, V de Vendetta 20 aniversario, silencio civico, concentracion pacifica Ceuta">
+  <meta name="description" content="Ceuta No Se Apaga. Convocatoria cívica, solemne, estática y en absoluto silencio el 5 de noviembre a las 20:00 h en la Plaza de los Reyes (Ceuta). Señal en espera.">
+  <meta name="keywords" content="Ceuta No Se Apaga, Ceuta 5 de Noviembre, Plaza de los Reyes, silencio civico, concentracion pacifica Ceuta, manifiesto">
   <meta name="author" content="Iniciativa Ciudadana Ceuta No Se Apaga">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://ceutanoseapaga.com">
@@ -16,14 +16,14 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ceutanoseapaga.com">
   <meta property="og:title" content="Ceuta No Se Apaga | 05.11.2026 · Plaza de los Reyes">
-  <meta property="og:description" content="30 días para recordar quiénes somos. Un instante para que nos escuchen a todos. Concentración cívica silenciosa en Ceuta.">
-  <meta property="og:image" content="assets/murallas_reales.jpg">
+  <meta property="og:description" content="30 días para recordar quiénes somos. Un instante para que nos escuchen a todos. Frecuencia oficial en espera.">
+  <meta property="og:image" content="assets/portada_v2.jpg">
 
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Ceuta No Se Apaga | 05.11 · Plaza de los Reyes">
   <meta name="twitter:description" content="Concentración solemne, estática y en absoluto silencio. 5 de noviembre a las 20:00 h.">
-  <meta name="twitter:image" content="assets/murallas_reales.jpg">
+  <meta name="twitter:image" content="assets/portada_v2.jpg">
 
   <!-- Favicon SVG con la silueta de la máscara -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23050505'/%3E%3Cpath d='M50 15 C30 15 20 30 20 50 C20 72 35 88 50 92 C65 88 80 72 80 50 C80 30 70 15 50 15 Z' fill='%23F5F5F5'/%3E%3Ccircle cx='36' cy='42' r='4' fill='%23050505'/%3E%3Ccircle cx='64' cy='42' r='4' fill='%23050505'/%3E%3Cpath d='M30 62 Q50 80 70 62' stroke='%23050505' stroke-width='4' fill='none'/%3E%3Cpath d='M40 55 Q50 62 60 55' stroke='%239E1B1B' stroke-width='3' fill='none'/%3E%3C/svg%3E">
@@ -31,6 +31,7 @@
   <!-- Hojas de Estilo -->
   <link rel="stylesheet" href="css/design-system.css">
   <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/teaser.css">
 </head>
 <body>
 
@@ -50,16 +51,6 @@
         </div>
       </a>
 
-      <!-- Enlaces de navegación con salto suave -->
-      <nav class="nav-menu" aria-label="Navegación principal">
-        <ul class="nav-links">
-          <li><a href="#manifiesto" class="nav-link">Manifiesto</a></li>
-          <li><a href="#red-silenciosa" class="nav-link">Red Silenciosa</a></li>
-          <li><a href="#protocolo" class="nav-link">Protocolo Día D</a></li>
-          <li><a href="#faq" class="nav-link">Blindaje Legal</a></li>
-        </ul>
-      </nav>
-
       <!-- Acciones de Navegación -->
       <div class="nav-actions">
         <!-- Control de Paisaje Sonoro Procedural (Web Audio API) -->
@@ -74,47 +65,43 @@
         </button>
 
         <!-- CTA Telegram Header -->
-        <a href="#telegram" class="btn btn-nav-telegram">
+        <a href="https://t.me/ceutanoseapaga" target="_blank" rel="noopener noreferrer" class="btn btn-nav-telegram">
           <span>Canal Seguro</span>
         </a>
-
-        <!-- Botón Menú Móvil -->
-        <button type="button" class="mobile-menu-btn" aria-label="Abrir menú de navegación">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
-        </button>
       </div>
     </div>
   </header>
 
   <main id="main-content">
-    <!-- B. HERO SECTION (EL IMPACTO) -->
-    <section class="hero-section" id="hero" aria-labelledby="hero-main-title">
+    <!-- TEASER HERO SECTION -->
+    <section class="teaser-hero" aria-labelledby="teaser-main-title">
       <div class="hero-backdrop" aria-hidden="true"></div>
       <canvas id="hero-canvas" aria-hidden="true"></canvas>
 
-      <div class="container hero-content">
+      <div class="container teaser-content">
         <!-- Badge Superior -->
-        <div class="badge-tag">
-          20 AÑOS DESPUÉS · UNA SOLA VOZ SILENCIOSA
+        <div class="teaser-badge">
+          <span class="teaser-badge-dot" aria-hidden="true"></span>
+          <span>FRECUENCIA EN ESPERA // EMISIÓN INMINENTE</span>
         </div>
 
         <!-- Titular Principal -->
-        <h1 class="hero-title" id="hero-main-title">
+        <h1 class="teaser-title" id="teaser-main-title">
           CEUTA NO SE <span>APAGA</span>
         </h1>
 
-        <!-- Subtítulo -->
-        <p class="hero-subtitle">
-          <strong>30 días para recordar quiénes somos.</strong> Un instante para que nos escuchen a todos.
-          Convocatoria solemne, estática y en absoluto silencio en el corazón de nuestra ciudad.
+        <!-- Cita Solemne de Impacto -->
+        <p class="teaser-tagline">
+          "Nos dijeron que vivir en la frontera es resignarse al olvido.<br>
+          Nos equivocamos al callar durante años, pero jamás olvidamos quiénes somos."
+        </p>
+
+        <p class="teaser-desc">
+          El 5 de noviembre a las 20:00 h, la Plaza de los Reyes de Ceuta vivirá un acto cívico, solemne, estático y en absoluto silencio. La transmisión oficial con el manifiesto completo y la red de custodia se activará en esta frecuencia.
         </p>
 
         <!-- Contador Regresivo en Tiempo Real -->
-        <div class="countdown-wrapper" aria-label="Cuenta atrás para la concentración">
+        <div class="countdown-wrapper" aria-label="Cuenta atrás para la hora cero">
           <div class="countdown-header">
             <div class="countdown-target">
               <span class="countdown-target-dot" aria-hidden="true"></span>
@@ -145,443 +132,86 @@
           </div>
         </div>
 
-        <!-- Reproductor Audiovisual Central (Transmisión de Emergencia 9:16) -->
-        <div class="hero-player-box reveal-on-scroll">
-          <div class="emergency-broadcast-frame">
-            <img src="assets/portada_v2.jpg" alt="Figura con la máscara en los pasadizos históricos de Ceuta" class="emergency-thumbnail" width="720" height="1280" loading="eager">
+        <!-- Visual Previo 9:16 con Estado de Custodia -->
+        <div class="teaser-frame-box">
+          <div class="teaser-visual-container">
+            <img src="assets/portada_v2.jpg" alt="Figura con la máscara en los túneles históricos de Ceuta" class="teaser-visual-img" width="720" height="1280">
 
-            <!-- HUD de transmisión clandestina -->
             <div class="broadcast-hud-top">
               <div class="rec-indicator">
                 <span class="rec-dot" aria-hidden="true"></span>
-                <span>REC // EMISIÓN 9:16</span>
+                <span>SEÑAL EN ESPERA</span>
               </div>
               <div class="broadcast-meta">
-                <span>05.11 // MANIFIESTO</span>
+                <span>05.11 // CUSTODIA</span>
               </div>
             </div>
 
-            <!-- Botón de Play Cinemático -->
-            <button type="button" class="btn-play-cinematic btn-open-video" aria-label="Reproducir manifiesto audiovisual El Eco de la Ciudad Dormida">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            <div class="teaser-lock-overlay">
+              <div class="teaser-lock-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" aria-hidden="true">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+              </div>
+              <div class="teaser-lock-text">EMISIÓN BLOQUEADA TEMPORALMENTE</div>
+              <div class="teaser-lock-caption">
+                El manifiesto audiovisual y los cuadrantes de máscaras se liberarán antes de la concentración.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Acciones Principales -->
+        <div class="teaser-actions">
+          <div class="teaser-buttons-group">
+            <a href="https://t.me/ceutanoseapaga" target="_blank" rel="noopener noreferrer" class="btn btn-telegram" style="padding: 15px 32px; font-size: 0.9rem;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
               </svg>
+              <span>SINTONIZAR CANAL EN TELEGRAM</span>
+            </a>
+
+            <button type="button" class="btn-lock-access btn-open-unlock" id="btn-open-unlock">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+              <span>Acceso de Custodia</span>
             </button>
-
-            <!-- HUD Inferior -->
-            <div class="broadcast-hud-bottom">
-              <div class="broadcast-caption">
-                "EL ECO DE LA CIUDAD DORMIDA" · V2.MP4
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Acciones Rápidas (CTAs) -->
-        <div class="hero-cta-group reveal-on-scroll">
-          <button type="button" class="btn btn-primary btn-pdf-download btn-open-pdf" id="hero-cta-pdf" aria-label="Descargar Manifiesto Oficial en PDF Firmado de 1.2 Megabytes">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-              <polyline points="7 10 12 15 17 10"></polyline>
-              <line x1="12" y1="15" x2="12" y2="3"></line>
-            </svg>
-            <span>Descargar Manifiesto Oficial (PDF Firmado)</span>
-            <span class="pdf-size-badge">1.2 MB</span>
-          </button>
-
-          <a href="#red-silenciosa" class="btn btn-outline" id="hero-cta-locator">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="22" y1="12" x2="18" y2="12"></line>
-              <line x1="6" y1="12" x2="2" y2="12"></line>
-              <line x1="12" y1="6" x2="12" y2="2"></line>
-              <line x1="12" y1="22" x2="12" y2="18"></line>
-            </svg>
-            <span>Localizar Punto de Máscaras</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- C. SECCIÓN MANIFIESTO: "EL ECO DE LA CIUDAD DORMIDA" -->
-    <section class="section-manifesto" id="manifiesto" aria-labelledby="manifesto-title">
-      <div class="container">
-        <header class="section-header reveal-on-scroll">
-          <span class="section-label">// DOCUMENTO FUNDACIONAL</span>
-          <h2 class="section-title" id="manifesto-title">EL ECO DE LA CIUDAD DORMIDA</h2>
-          <p class="section-subtitle">
-            Un llamamiento a la dignidad, a la concordia y al despertar pacífico de Ceuta frente al olvido y la resignación.
-          </p>
-        </header>
-
-        <div class="manifesto-editorial-grid">
-          <!-- Columna 1: Extracto Clave Editorial -->
-          <div class="manifesto-quote-card reveal-on-scroll">
-            <div class="quote-ornament" aria-hidden="true">“</div>
-            <blockquote class="manifesto-quote-text">
-              Nos dijeron que vivir en la frontera es resignarse al olvido. Nos equivocamos al callar durante años, pero jamás olvidamos quiénes somos.
-            </blockquote>
-            <cite class="manifesto-quote-author">
-              — ASAMBLEA CÍVICA CEUTA NO SE APAGA · 05.11
-            </cite>
           </div>
 
-          <!-- Columna 2: Los 3 Pilares -->
-          <div class="manifesto-pillars">
-            <!-- Pilar 1 -->
-            <article class="pillar-card reveal-on-scroll">
-              <div class="pillar-header">
-                <span class="pillar-number">01</span>
-                <h3 class="pillar-title">Dignidad Territorial</h3>
-              </div>
-              <p class="pillar-description">
-                El fin irrevocable al aislamiento estructural y al peaje injusto sobre nuestras vidas. Cruzar el Estrecho no es un capricho vacacional, es el cordón umbilical de nuestra sanidad, nuestra educación y nuestras familias. Exigimos tarifas justas, servicios públicos robustos y un trato de igualdad con el resto del territorio peninsular.
-              </p>
-            </article>
-
-            <!-- Pilar 2 -->
-            <article class="pillar-card reveal-on-scroll">
-              <div class="pillar-header">
-                <span class="pillar-number">02</span>
-                <h3 class="pillar-title">Unidad Ciudadana</h3>
-              </div>
-              <p class="pillar-description">
-                Sin partidos políticos, sin credos, sin bandos ni instrumentalización electoral. Ceuta es un crisol de culturas milenarias que conviven en respeto. Esta convocatoria trasciende cualquier sigla y une a la totalidad de los vecinos bajo una sola premisa: nuestra ciudad merece futuro y respeto.
-              </p>
-            </article>
-
-            <!-- Pilar 3 -->
-            <article class="pillar-card reveal-on-scroll">
-              <div class="pillar-header">
-                <span class="pillar-number">03</span>
-                <h3 class="pillar-title">Fuerza del Silencio</h3>
-              </div>
-              <p class="pillar-description">
-                El ruido confronta, pero el silencio sincrónico e inquebrantable conmociona conciencias. Quince minutos de pie, con el rostro en calma y la mirada fija, representan la mayor demostración de madurez democrática y firmeza cívica jamás vista en la Plaza de los Reyes.
-              </p>
-            </article>
+          <div style="font-family: var(--font-mono); font-size: 0.72rem; color: #666; margin-top: 4px;">
+            Atajo de organización: <kbd style="background: #111; padding: 2px 6px; border: 1px solid #333; border-radius: 3px; color: #AAA;">Ctrl + Shift + V</kbd>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- D. MÓDULO INTERACTIVO: LA RED SILENCIOSA (BUSCADOR DE MÁSCARAS) -->
-    <section class="section-mask-network" id="red-silenciosa" aria-labelledby="network-title">
-      <div class="container">
-        <header class="section-header reveal-on-scroll">
-          <span class="section-label">// LOGÍSTICA CIUDADANA Y CUSTODIA</span>
-          <h2 class="section-title" id="network-title">LA RED SILENCIOSA</h2>
-          <p class="section-subtitle">
-            Localizador seguro de cuadrantes urbanos de custodia de máscaras. Para blindar a los pequeños comercios colaboradores ante presiones, no se publican nombres ni direcciones exactas.
-          </p>
-        </header>
-
-        <!-- Widget de Clave Dinámica del Día -->
-        <div class="passcode-banner reveal-on-scroll">
-          <div class="passcode-meta">
-            <span class="passcode-tag">CONTRASEÑA DEL DÍA PARA EL DEPENDIENTE</span>
-            <div class="passcode-phrase-wrapper">
-              <span class="passcode-phrase" id="passcode-daily">LA ORILLA TAMBIÉN RECUERDA</span>
-              <button type="button" class="btn btn-outline btn-copy-passcode" id="btn-copy-passcode" aria-label="Copiar contraseña al portapapeles">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                </svg>
-                <span>Copiar</span>
-              </button>
-            </div>
-          </div>
-
-          <div class="passcode-reminder">
-            <strong>Recordatorio estricto:</strong> 1 máscara por persona de forma estrictamente gratuita. Prohibida toda comercialización o lucro.
-          </div>
-        </div>
-
-        <!-- Filtros por Barriada -->
-        <div class="network-filters reveal-on-scroll" role="tablist" aria-label="Filtrar por barriadas">
-          <button type="button" class="filter-btn is-active" data-filter="all" role="tab" aria-selected="true">Todas las zonas</button>
-          <button type="button" class="filter-btn" data-filter="centro" role="tab" aria-selected="false">Centro / Paseo del Revellín</button>
-          <button type="button" class="filter-btn" data-filter="hadu" role="tab" aria-selected="false">Hadú / Teniente Gautier</button>
-          <button type="button" class="filter-btn" data-filter="san-antonio" role="tab" aria-selected="false">San Antonio / Hacho</button>
-          <button type="button" class="filter-btn" data-filter="benzu" role="tab" aria-selected="false">Benzú</button>
-          <button type="button" class="filter-btn" data-filter="poligono" role="tab" aria-selected="false">Polígono</button>
-        </div>
-
-        <!-- Grid de Cuadrantes Anónimos de 150 metros -->
-        <div class="quadrant-grid" id="quadrant-grid">
-          <!-- Renderizado dinámico desde js/mask-network.js -->
-        </div>
-      </div>
-    </section>
-
-    <!-- E. PROTOCOLO DEL DÍA D (INFOGRAFÍA INTERACTIVA / TIMELINE) -->
-    <section class="section-protocol" id="protocolo" aria-labelledby="protocol-title">
-      <div class="container">
-        <header class="section-header reveal-on-scroll">
-          <span class="section-label">// CRONOGRAMA DE PRECISIÓN · 05 DE NOVIEMBRE</span>
-          <h2 class="section-title" id="protocol-title">PROTOCOLO DEL DÍA D</h2>
-          <p class="section-subtitle">
-            Cada minuto cuenta para mantener el orden, la seguridad y la fuerza del impacto pacífico. Sigue con rigor estas cuatro fases de la concentración.
-          </p>
-        </header>
-
-        <div class="protocol-timeline">
-          <!-- Paso 1 -->
-          <div class="timeline-step reveal-on-scroll" data-step="1">
-            <div class="timeline-marker" aria-hidden="true">01</div>
-            <div class="timeline-card">
-              <span class="timeline-time-badge">19:30 - 19:50 | FASE INICIAL</span>
-              <h3 class="timeline-title">La Infiltración Invisible</h3>
-              <p class="timeline-desc">
-                Llegada natural a la Plaza de los Reyes y calles aledañas (Calle Real, Revellín) como peatones comunes. No formes grupos compactos de antemano, ni exhibas banderas, pancartas ni prendas distintivas. La máscara debe permanecer guardada discretamente en el bolsillo o bolso.
-              </p>
-              <div class="timeline-tactical-tip">
-                <strong>Pauta clave:</strong> Actúa como en un paseo habitual de tarde. Respeta el paso de vehículos autorizados y comercios.
-              </div>
-            </div>
-          </div>
-
-          <!-- Paso 2 -->
-          <div class="timeline-step reveal-on-scroll" data-step="2">
-            <div class="timeline-marker" aria-hidden="true">02</div>
-            <div class="timeline-card">
-              <span class="timeline-time-badge">20:00:00 | SINCRONIZACIÓN EXACTA</span>
-              <h3 class="timeline-title">El Gesto Sincronizado</h3>
-              <p class="timeline-desc">
-                Al sonar la octava campanada de las 20:00 h, todas las personas presentes extraen su máscara y se la colocan al unísono sobre el rostro. Sin aspavientos, sin aplausos, sin una sola palabra. La plaza se transforma instantáneamente en un mosaico unánime de rostros idénticos.
-              </p>
-              <div class="timeline-tactical-tip">
-                <strong>Pauta clave:</strong> Ajuste firme y mirada al frente hacia el centro de la plaza. Postura erguida y pacífica.
-              </div>
-            </div>
-          </div>
-
-          <!-- Paso 3 -->
-          <div class="timeline-step reveal-on-scroll" data-step="3">
-            <div class="timeline-marker" aria-hidden="true">03</div>
-            <div class="timeline-card">
-              <span class="timeline-time-badge">20:00 - 20:15 | EL ACTO CENTRAL</span>
-              <h3 class="timeline-title">Los 15 Minutos de Silencio</h3>
-              <p class="timeline-desc">
-                Inmovilidad y silencio absoluto. Prohibido proferir insultos, corear consignas o entrar en discusiones con posibles observadores. En el minuto 20:10, todos encenderán la linterna de su teléfono móvil apuntando en vertical hacia el suelo, creando un lecho de luz que ilumine los adoquines.
-              </p>
-              <div class="timeline-tactical-tip">
-                <strong>Pauta clave:</strong> Silencio sepulcral. Si alguien intenta provocar, no respondas: el silencio colectivo neutraliza el altercado.
-              </div>
-            </div>
-          </div>
-
-          <!-- Paso 4 -->
-          <div class="timeline-step reveal-on-scroll" data-step="4">
-            <div class="timeline-marker" aria-hidden="true">04</div>
-            <div class="timeline-card">
-              <span class="timeline-time-badge">20:20 - 20:30 | CONCLUSIÓN</span>
-              <h3 class="timeline-title">Desescalada Ejemplar</h3>
-              <p class="timeline-desc">
-                Una señal acústica de sirena marina marcará el fin del acto. Retirada de máscaras en calma, saludo cordial entre vecinos y dispersión fluida en todas las direcciones. Inspección y recogida de cualquier residuo en la plaza antes de abandonar el lugar: nuestro civismo es intachable.
-              </p>
-              <div class="timeline-tactical-tip">
-                <strong>Pauta clave:</strong> Dejar la Plaza de los Reyes en perfecto estado de limpieza y orden público.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- F. PREGUNTAS FRECUENTES (ACORDEÓN DE BLINDAJE LEGAL Y SEGURIDAD) -->
-    <section class="section-faq" id="faq" aria-labelledby="faq-title">
-      <div class="container">
-        <header class="section-header reveal-on-scroll">
-          <span class="section-label">// MARCO JURÍDICO Y DUDAS CIUDADANAS</span>
-          <h2 class="section-title" id="faq-title">BLINDAJE LEGAL Y SEGURIDAD</h2>
-          <p class="section-subtitle">
-            Conoce tus derechos fundamentales amparados en el ordenamiento constitucional español y los protocolos de protección colectiva.
-          </p>
-        </header>
-
-        <div class="faq-accordion reveal-on-scroll" id="accordion-legal">
-          <!-- FAQ 1 -->
-          <div class="faq-item">
-            <button type="button" class="faq-trigger">
-              <span>¿Es legal portar la máscara en la vía pública?</span>
-              <span class="faq-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5">
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-              </span>
-            </button>
-            <div class="faq-content">
-              <div class="faq-inner">
-                <p>
-                  <strong>Sí, con amparo constitucional en el Art. 21 de la Constitución Española.</strong> El derecho de reunión pacífica y sin armas es un derecho fundamental que prevalece. Portar una máscara en una manifestación pacífica no constituye por sí mismo ningún delito.
-                </p>
-                <p>
-                  <strong>Directriz policial de obligado cumplimiento:</strong> Si un agente de las Fuerzas y Cuerpos de Seguridad del Estado te solicita de forma individual identificarte, debes retirarte la máscara momentáneamente de forma serena, mostrar tu DNI y volver a colocártela una vez concluida la identificación. Mantén siempre una actitud colaborativa y sosegada.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ 2 -->
-          <div class="faq-item">
-            <button type="button" class="faq-trigger">
-              <span>¿Qué partidos o entidades financian esta iniciativa?</span>
-              <span class="faq-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5">
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-              </span>
-            </button>
-            <div class="faq-content">
-              <div class="faq-inner">
-                <p>
-                  <strong>Ninguno.</strong> Ceuta No Se Apaga es una causa cívica 100% independiente, transversal y autofinanciada por aportaciones populares directas de vecinos, autónomos y comerciantes locales.
-                </p>
-                <p>
-                  No aceptamos donaciones de formaciones políticas, sindicatos, asociaciones subvencionadas ni candidaturas electorales. Las máscaras se han adquirido mediante fondos de caja cívica abierta y se entregan a coste cero para los asistentes.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ 3 -->
-          <div class="faq-item">
-            <button type="button" class="faq-trigger">
-              <span>¿Qué ocurre si alguien intenta alterar el orden o provocar incidentes?</span>
-              <span class="faq-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5">
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-              </span>
-            </button>
-            <div class="faq-content">
-              <div class="faq-inner">
-                <p>
-                  <strong>Protocolo de Inmunidad Serena:</strong> Ante cualquier intento de provocación, griterío, insulto o alteración, la consigna es <em>no entrar en interacción verbal ni física</em>.
-                </p>
-                <p>
-                  Los participantes situados en las inmediaciones darán tres pasos hacia atrás de forma coordinada, dejando al provocador aislado visualmente en el centro del espacio vacío. La propia Policía Nacional se encargará de retirarlo sin que la concentración pierda su solemne silencio ni su dignidad.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ 4 -->
-          <div class="faq-item">
-            <button type="button" class="faq-trigger">
-              <span>¿Puedo acudir con mi familia, menores o personas mayores?</span>
-              <span class="faq-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5">
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-              </span>
-            </button>
-            <div class="faq-content">
-              <div class="faq-inner">
-                <p>
-                  <strong>Por supuesto.</strong> Es un acto cívico intergeneracional y pacífico. Se han designado los perímetros laterales de la Plaza de los Reyes (junto a los bancos y zonas arboladas) como espacios preferentes para personas de movilidad reducida, carritos infantiles y personas mayores que requieran asiento.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ 5 -->
-          <div class="faq-item">
-            <button type="button" class="faq-trigger">
-              <span>¿Cómo puedo colaborar si soy comerciante o autónomo local?</span>
-              <span class="faq-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5">
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-              </span>
-            </button>
-            <div class="faq-content">
-              <div class="faq-inner">
-                <p>
-                  La red de comercios custodios sigue ampliándose para garantizar que cada caballa pueda retirar su máscara de forma segura y cercana a su barrio.
-                </p>
-                <div class="faq-action-box">
-                  <div>
-                    <strong>Puntos de custodia anónimos:</strong>
-                    <span style="display:block; font-size: 0.85rem; color: #AAA;">Recibe un lote gratuito de máscaras y el microvinilo circular identificativo.</span>
-                  </div>
-                  <button type="button" class="btn btn-outline btn-open-merchant" style="padding: 8px 16px; font-size: 0.78rem;">
-                    Solicitar Kit de Custodia
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- G. CANAL UNIDIRECCIONAL & FUNNEL SEGURO -->
-    <section class="section-telegram" id="telegram" aria-labelledby="telegram-title">
-      <div class="container">
-        <div class="telegram-secure-card reveal-on-scroll">
-          <div class="crypto-badge">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-            </svg>
-            <span>FRECUENCIA 05.11 // PROTOCOLO SEGURO</span>
-          </div>
-
-          <h2 class="telegram-title" id="telegram-title">CANAL UNIDIRECCIONAL DE EMERGENCIAS</h2>
-          <p class="telegram-desc">
-            Un único mensaje diario a las 20:00 h con coordenadas de cuadrantes actualizadas, contraseñas de dependientes y avisos legales en tiempo real. Cero spam, cero recopilación de datos, anonimato blindado para todos los suscriptores.
-          </p>
-
-          <div class="telegram-specs">
-            <div class="spec-item">
-              <span class="spec-dot" aria-hidden="true"></span>
-              <span>Encriptación de extremo a extremo</span>
-            </div>
-            <div class="spec-item">
-              <span class="spec-dot" aria-hidden="true"></span>
-              <span>Sin números de teléfono visibles</span>
-            </div>
-            <div class="spec-item">
-              <span class="spec-dot" aria-hidden="true"></span>
-              <span>1 emisión diaria a las 20:00 h</span>
-            </div>
-          </div>
-
-          <a href="https://t.me/ceutanoseapaga" target="_blank" rel="noopener noreferrer" class="btn btn-telegram btn-large" style="padding: 16px 36px; font-size: 0.95rem;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
-            </svg>
-            <span>SINTONIZAR CANAL EN TELEGRAM</span>
-          </a>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- H. PIE DE PÁGINA (FOOTER) -->
-  <footer class="site-footer" role="contentinfo">
+  <!-- FOOTER DE LA LANDING DE ESPERA -->
+  <footer class="site-footer" role="contentinfo" style="padding-top: 40px;">
     <div class="container">
-      <div class="footer-top">
+      <div class="footer-top" style="border-bottom: none; padding-bottom: 20px;">
         <div class="footer-statement">
           <div class="footer-statement-title">// DECLARACIÓN DE NEUTRALIDAD CÍVICA</div>
           <p class="footer-statement-text">
-            Iniciativa ciudadana transversal sin vinculación institucional ni política, amparada en los derechos fundamentales de reunión pacífica (Art. 21) y libre expresión de ideas (Art. 20) de la Constitución Española. La causa Ceuta No Se Apaga no pertenece a ningún dirigente, sino a la voluntad colectiva del pueblo de Ceuta.
+            Iniciativa ciudadana transversal sin vinculación institucional ni partidos políticos, amparada en los derechos fundamentales de reunión pacífica (Art. 21) y libre expresión de ideas (Art. 20) de la Constitución Española.
           </p>
           <div class="footer-privacy-badge">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2" aria-hidden="true">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
             </svg>
-            <span>Esta web respeta tu anonimato: Cero cookies de rastreo, cero analíticas intrusivas, cero almacenamiento de IP.</span>
+            <span>Esta web respeta tu anonimato: Cero cookies, cero analíticas, cero almacenamiento de IP.</span>
           </div>
         </div>
 
         <div class="footer-links-group">
-          <button type="button" class="footer-link btn-open-pdf">Aviso Legal Cívico & Manifiesto</button>
-          <button type="button" class="footer-link btn-open-video">Emisión Audiovisual Oficial</button>
           <a href="mailto:prensa@ceutanoseapaga.com" class="footer-link">Contacto de Prensa: prensa@ceutanoseapaga.com</a>
-          <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #666; margin-top: 8px;">
+          <button type="button" class="footer-link btn-open-unlock" style="background: none; border: none; padding: 0; cursor: pointer;">
+            Desbloqueo de Frecuencia Oficial
+          </button>
+          <span style="font-family: var(--font-mono); font-size: 0.72rem; color: #666; margin-top: 8px;">
             CEUTA · 2006 - 2026 // 20º ANIVERSARIO
           </span>
         </div>
@@ -589,71 +219,24 @@
 
       <div class="footer-bottom">
         <div>
-          © 2026 ASAMBLEA CIUDADANA CEUTA NO SE APAGA. LIBRE DIFUSIÓN BAJO LICENCIA CREATIVE COMMONS BY-NC-SA 4.0.
+          © 2026 ASAMBLEA CIUDADANA CEUTA NO SE APAGA.
         </div>
         <div>
-          FRECUENCIA CÍVICA AUTOGESTIONADA
+          FRECUENCIA EN ESPERA · 05.11
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- ==========================================================================
-       MODALES CINEMATOGRÁFICOS
-       ========================================================================== -->
-
-  <!-- 1. Modal Transmisión de Vídeo con Subtítulos Sincronizados (9:16) -->
-  <div class="modal-overlay" id="video-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="video-modal-title">
-    <div class="modal-window video-modal-window">
-      <div class="modal-header">
-        <div class="modal-title" id="video-modal-title">
+  <!-- MODAL DE ACCESO DE CUSTODIA (DESBLOQUEO DE LA WEB PRINCIPAL) -->
+  <div class="modal-overlay" id="passcode-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="unlock-modal-title">
+    <div class="modal-window passcode-modal-card">
+      <div class="modal-header" style="background: transparent; border-bottom: none; padding: 0 0 16px;">
+        <div class="modal-title" id="unlock-modal-title" style="margin: 0 auto;">
           <span class="rec-dot" aria-hidden="true"></span>
-          <span>MANIFIESTO // EL ECO DE LA CIUDAD DORMIDA</span>
-          <span style="font-size: 0.75rem; color: var(--accent-crimson); margin-left: 10px;" id="video-timecode">00:00:00</span>
+          <span>ACCESO DE CUSTODIA // DESBLOQUEO</span>
         </div>
-        <button type="button" class="btn-close-modal" id="btn-close-video" aria-label="Cerrar reproductor de vídeo">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
-        </button>
-      </div>
-      <div class="modal-body" style="padding: 0; background: #000;">
-        <div class="video-modal-screen">
-          <video id="manifesto-video-element" class="manifesto-video-player" src="assets/V2.mp4" poster="assets/portada_v2.jpg" playsinline controls preload="metadata"></video>
-          
-          <div class="video-subtitles-box">
-            <div class="subtitles-text" id="video-subtitles-text">
-              [SEÑAL CIFRADA ESTABLECIDA // PLAZA DE LOS REYES]
-            </div>
-          </div>
-        </div>
-        <div class="video-modal-footer">
-          <button type="button" class="btn-toggle-subtitles" id="btn-toggle-subtitles" aria-pressed="true" aria-label="Alternar visibilidad de los subtítulos">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <rect x="2" y="4" width="20" height="16" rx="2" ry="2"></rect>
-              <path d="M7 15h4M15 15h2M7 11h2M13 11h4"></path>
-            </svg>
-            <span id="toggle-subtitles-label">Ocultar Subtítulos</span>
-          </button>
-          <span class="video-modal-status-badge">AUDIOVISUAL // 05.11</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 2. Modal Visor y Descarga del Manifiesto Oficial (PDF Firmado) -->
-  <div class="modal-overlay" id="pdf-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="pdf-modal-title">
-    <div class="modal-window">
-      <div class="modal-header">
-        <div class="modal-title" id="pdf-modal-title">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-            <polyline points="14 2 14 8 20 8"></polyline>
-          </svg>
-          <span>MANIFIESTO_OFICIAL_CEUTA_NO_SE_APAGA_05NOV.PDF (1.2 MB)</span>
-        </div>
-        <button type="button" class="btn-close-modal" id="btn-close-pdf" aria-label="Cerrar visor de manifiesto">
+        <button type="button" class="btn-close-modal" id="btn-close-unlock" aria-label="Cerrar modal">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <line x1="18" y1="6" x2="6" y2="18"></line>
             <line x1="6" y1="6" x2="18" y2="18"></line>
@@ -661,126 +244,31 @@
         </button>
       </div>
 
-      <div class="modal-body">
-        <div class="pdf-preview-sheet">
-          <div class="pdf-preview-header">
-            <div>
-              <div class="pdf-official-seal">ASAMBLEA CÍVICA POPULAR</div>
-              <div style="font-size: 0.75rem; color: #666; font-family: 'Inter', sans-serif;">REGISTRO DE VOLUNTAD VECINAL · CEUTA</div>
-            </div>
-            <div style="text-align: right;">
-              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: #9E1B1B; font-weight: 700;">CONVOCATORIA: 05.11.2026</span>
-            </div>
-          </div>
+      <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6;">
+        Introduce la contraseña de la organización o haz clic para previsualizar la señal completa de la web:
+      </p>
 
-          <h3 class="pdf-preview-title">EL ECO DE LA CIUDAD DORMIDA</h3>
-
-          <div class="pdf-preview-body">
-            <p style="margin-bottom: 14px; font-style: italic; font-weight: 500;">
-              "Nos dijeron que vivir en la frontera es resignarse al olvido. Nos equivocamos al callar durante años, pero jamás olvidamos quiénes somos."
-            </p>
-            <p style="margin-bottom: 12px;">
-              <strong>I. Dignidad Territorial:</strong> Ceuta no puede continuar asfixiada por el sobrecoste deliberado del transporte marítimo y el deterioro progresivo de sus infraestructuras fundamentales. El Estrecho de Gibraltar debe ser un puente y nunca un foso económico.
-            </p>
-            <p style="margin-bottom: 12px;">
-              <strong>II. Neutralidad e Independencia:</strong> Este movimiento rechaza enérgicamente el oportunismo de partidos políticos y grupos de presión. Una sola voz que representa a todos los ceutíes, sin exclusión por motivos culturales o religiosos.
-            </p>
-            <p style="margin-bottom: 12px;">
-              <strong>III. Quince Minutos de Silencio Absoluto:</strong> El 5 de noviembre a las 20:00 h en la Plaza de los Reyes nos colocaremos la máscara al unísono. Inmóviles y pacíficos, demostraremos que el pueblo de Ceuta está despierto.
-            </p>
-          </div>
-
-          <div class="pdf-signature-block">
-            <div>
-              <div style="font-size: 0.8rem; font-weight: 700; color: #9E1B1B;">SELLO DE CUSTODIA CIUDADANA</div>
-              <div class="pdf-hash">SHA-256: 7f8a92e104cd38ba41b07293e8a152d0f04c6e2b</div>
-            </div>
-            <div style="text-align: right; font-family: var(--font-mono); font-size: 0.75rem; color: #444;">
-              EJEMPLAR OFICIAL VALIDADO
-            </div>
-          </div>
-        </div>
-
-        <div style="margin-top: 24px; display: flex; justify-content: flex-end; gap: 14px;">
-          <button type="button" class="btn btn-outline" id="btn-print-pdf">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <polyline points="6 9 6 2 18 2 18 9"></polyline>
-              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
-              <rect x="6" y="14" width="12" height="8"></rect>
-            </svg>
-            <span>Imprimir Ejemplar</span>
+      <form id="unlock-form">
+        <input type="text" id="unlock-passcode-input" class="passcode-input" placeholder="INTRODUCE CONTRASEÑA" autocomplete="off" required>
+        
+        <div style="display: flex; gap: 10px; justify-content: center;">
+          <button type="submit" class="btn btn-primary" style="padding: 12px 24px; font-size: 0.82rem;">
+            Desbloquear Frecuencia
           </button>
-          <button type="button" class="btn btn-primary" id="btn-download-pdf-file">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-              <polyline points="7 10 12 15 17 10"></polyline>
-              <line x1="12" y1="15" x2="12" y2="3"></line>
-            </svg>
-            <span>Descargar Archivo (1.2 MB)</span>
-          </button>
+          <a href="landing-completa.html" class="btn btn-outline" style="padding: 12px 20px; font-size: 0.82rem;">
+            Abrir Web Directa
+          </a>
         </div>
-      </div>
-    </div>
-  </div>
+      </form>
 
-  <!-- 3. Modal Solicitud de Custodia para Comerciantes -->
-  <div class="modal-overlay" id="merchant-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="merchant-modal-title">
-    <div class="modal-window" style="max-width: 600px;">
-      <div class="modal-header">
-        <div class="modal-title" id="merchant-modal-title">
-          <span class="mini-vinyl-badge" style="width: 14px; height: 14px;" aria-hidden="true"></span>
-          <span>SOLICITAR KIT DE CUSTODIA CIUDADANA</span>
-        </div>
-        <button type="button" class="btn-close-modal" id="btn-close-merchant" aria-label="Cerrar ventana de solicitud">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px; line-height: 1.6;">
-          Tu comercio quedará registrado únicamente mediante un identificador criptográfico y un cuadrante aproximado de 150 metros. Recibirás un paquete sellado con 50 máscaras y el microvinilo circular rojo lacre.
-        </p>
-
-        <form id="merchant-form">
-          <div style="margin-bottom: 16px;">
-            <label for="merchant-neighborhood" style="display: block; font-family: var(--font-mono); font-size: 0.78rem; color: #CCC; margin-bottom: 6px;">
-              BARRIADA / ZONA DE CEUTA
-            </label>
-            <select id="merchant-neighborhood" required style="width: 100%; padding: 12px; background: #161616; border: 1px solid var(--border-light); border-radius: 4px; color: #FFF;">
-              <option value="centro">Centro / Paseo del Revellín / Gran Vía</option>
-              <option value="hadu">Hadú / Teniente Gautier</option>
-              <option value="san-antonio">San Antonio / Monte Hacho</option>
-              <option value="benzu">Benzú</option>
-              <option value="poligono">Polígono Virgen de África</option>
-            </select>
-          </div>
-
-          <div style="margin-bottom: 20px;">
-            <label for="merchant-alias" style="display: block; font-family: var(--font-mono); font-size: 0.78rem; color: #CCC; margin-bottom: 6px;">
-              ALIAS O CANAL DE MENSAJERÍA CIFRADO (TELEGRAM O EMAIL CIFRADO)
-            </label>
-            <input type="text" id="merchant-alias" required placeholder="@tu_alias_telegram o correo proton" style="width: 100%; padding: 12px; background: #161616; border: 1px solid var(--border-light); border-radius: 4px; color: #FFF;">
-          </div>
-
-          <button type="submit" class="btn btn-primary" style="width: 100%;">
-            Generar Clave de Custodia Segura
-          </button>
-        </form>
-
-        <div id="generated-token-box"></div>
+      <div style="margin-top: 18px; font-family: var(--font-mono); font-size: 0.72rem; color: #555;">
+        Pista de custodia: <em>LA ORILLA TAMBIÉN RECUERDA</em>
       </div>
     </div>
   </div>
 
   <!-- Scripts Modulares -->
   <script src="js/soundscape.js"></script>
-  <script src="js/countdown.js"></script>
-  <script src="js/mask-network.js"></script>
-  <script src="js/protocol-timeline.js"></script>
-  <script src="js/pdf-generator.js"></script>
-  <script src="js/video-modal.js"></script>
-  <script src="js/app.js"></script>
+  <script src="js/teaser.js"></script>
 </body>
 </html>
