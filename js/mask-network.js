@@ -58,7 +58,7 @@ const CUSTODY_QUADRANTS = [
     status: 'available',
     statusText: 'CUSTODIA ACTIVA · DISPONIBLES',
     remainingApprox: 'Disponible',
-    tip: 'Tienda de barrio adherida. Pronunciar la clave con calma al dependiente.',
+    tip: 'Tienda de barrio adherida. Retirada gratuita y directa en mostrador.',
     updated: 'Hoy 17:10 h'
   },
   {
@@ -101,8 +101,6 @@ class MaskNetworkManager {
     this.currentFilter = 'all';
     this.gridContainer = document.getElementById('quadrant-grid');
     this.filterButtons = document.querySelectorAll('.filter-btn');
-    this.copyBtn = document.getElementById('btn-copy-passcode');
-    this.passcodeText = document.getElementById('passcode-daily');
   }
 
   init() {
@@ -122,18 +120,6 @@ class MaskNetworkManager {
         this.render();
       });
     });
-
-    // Copiar clave dinámica del día
-    if (this.copyBtn && this.passcodeText) {
-      this.copyBtn.addEventListener('click', () => {
-        const phrase = this.passcodeText.textContent.trim();
-        navigator.clipboard.writeText(phrase).then(() => {
-          window.showToast?.(`Clave copiada: "${phrase}". Úsala con cortesía.`);
-        }).catch(() => {
-          window.showToast?.(`Clave: ${phrase}`);
-        });
-      });
-    }
   }
 
   render() {
