@@ -194,7 +194,7 @@ class MerchantModal {
         }
 
         const neighborhood = document.getElementById('merchant-neighborhood')?.value || 'No especificada';
-        const alias = document.getElementById('merchant-alias')?.value || 'No especificado';
+        const email = document.getElementById('merchant-email')?.value || 'No especificado';
         const notes = document.getElementById('merchant-notes')?.value || 'Sin notas adicionales';
         const randToken = 'CUSTODIA-' + Math.random().toString(36).substring(2, 8).toUpperCase() + '-0511';
 
@@ -210,7 +210,7 @@ class MerchantModal {
               _template: 'table',
               _captcha: 'false',
               'Barriada o Zona': neighborhood,
-              'Canal de Contacto (Alias o Email)': alias,
+              'Correo de Contacto': email,
               'Referencia o Comercio': notes,
               'Token de Custodia': randToken,
               'Fecha de Registro': new Date().toLocaleString('es-ES')
@@ -230,7 +230,7 @@ class MerchantModal {
                   Identificador Criptográfico: <strong>${randToken}</strong>
                 </p>
                 <p style="font-size: 0.76rem; color: #AAA; margin-top: 8px; line-height: 1.5;">
-                  Un enlace ciudadano contactará contigo a través de tu alias/email para coordinar el depósito del paquete de máscaras y el microvinilo.
+                  Un enlace ciudadano contactará contigo a través de tu correo electrónico (<strong>${email}</strong>) para coordinar el depósito del paquete de máscaras y el microvinilo.
                 </p>
               </div>
             `;
@@ -251,7 +251,7 @@ class MerchantModal {
                 <p style="font-size: 0.82rem; color: #CCC; margin-bottom: 12px;">
                   No se pudo conectar con el servicio automático. Pulsa abajo para enviar tu solicitud directamente con tu aplicación de correo:
                 </p>
-                <a href="mailto:ceutanoseapaga@proton.me?subject=%5BSOLICITUD%20KIT%20CUSTODIO%5D%20${encodeURIComponent(neighborhood)}&body=Barriada:%20${encodeURIComponent(neighborhood)}%0AContacto:%20${encodeURIComponent(alias)}%0ANotas:%20${encodeURIComponent(notes)}%0AToken:%20${randToken}" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.8rem;">
+                <a href="mailto:ceutanoseapaga@proton.me?subject=%5BSOLICITUD%20KIT%20CUSTODIO%5D%20${encodeURIComponent(neighborhood)}&body=Barriada:%20${encodeURIComponent(neighborhood)}%0ACorreo:%20${encodeURIComponent(email)}%0ANotas:%20${encodeURIComponent(notes)}%0AToken:%20${randToken}" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.8rem;">
                   Abrir correo a ceutanoseapaga@proton.me
                 </a>
               </div>
