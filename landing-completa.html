@@ -633,8 +633,8 @@
         <div class="footer-links-group">
           <button type="button" class="footer-link btn-open-pdf">Aviso Legal Cívico & Manifiesto</button>
           <button type="button" class="footer-link btn-open-video">Emisión Audiovisual Oficial</button>
-          <a href="mailto:prensa@ceutanoseapaga.com" class="footer-link">Contacto de Prensa:
-            prensa@ceutanoseapaga.com</a>
+          <a href="mailto:ceutanoseapaga@proton.me" class="footer-link">Contacto:
+            ceutanoseapaga@proton.me</a>
           <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #666; margin-top: 8px;">
             CEUTA · 2006 - 2026 // 20º ANIVERSARIO
           </span>
@@ -816,41 +816,58 @@
       </div>
       <div class="modal-body">
         <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px; line-height: 1.6;">
-          Tu comercio quedará registrado únicamente mediante un identificador criptográfico y un cuadrante aproximado de
-          150 metros. Recibirás un paquete sellado con 50 máscaras y el microvinilo circular rojo lacre.
+          Tu comercio colaborará como punto de custodia voluntario. La solicitud se remite de forma cifrada a la asamblea ciudadana (<code>ceutanoseapaga@proton.me</code>). Recibirás un lote sellado con máscaras y el microvinilo circular identificativo.
         </p>
 
         <form id="merchant-form">
           <div style="margin-bottom: 16px;">
             <label for="merchant-neighborhood"
               style="display: block; font-family: var(--font-mono); font-size: 0.78rem; color: #CCC; margin-bottom: 6px;">
-              BARRIADA / ZONA DE CEUTA
+              BARRIADA / ZONA DE CEUTA *
             </label>
             <select id="merchant-neighborhood" required
               style="width: 100%; padding: 12px; background: #161616; border: 1px solid var(--border-light); border-radius: 4px; color: #FFF;">
-              <option value="centro">Centro / Paseo del Revellín / Gran Vía</option>
-              <option value="hadu">Hadú / Teniente Gautier</option>
-              <option value="san-antonio">San Antonio / Monte Hacho</option>
-              <option value="benzu">Benzú</option>
-              <option value="poligono">Polígono Virgen de África</option>
+              <option value="Centro / Revellín / Gran Vía">Centro / Paseo del Revellín / Gran Vía</option>
+              <option value="Hadú / Teniente Gautier">Hadú / Teniente Gautier</option>
+              <option value="San Antonio / Monte Hacho">San Antonio / Monte Hacho</option>
+              <option value="Benzú">Benzú</option>
+              <option value="Polígono Virgen de África">Polígono Virgen de África</option>
             </select>
           </div>
 
-          <div style="margin-bottom: 20px;">
+          <div style="margin-bottom: 16px;">
             <label for="merchant-alias"
               style="display: block; font-family: var(--font-mono); font-size: 0.78rem; color: #CCC; margin-bottom: 6px;">
-              ALIAS O CANAL DE MENSAJERÍA CIFRADO (TELEGRAM O EMAIL CIFRADO)
+              CANAL DE CONTACTO (EMAIL O USUARIO TELEGRAM) *
             </label>
-            <input type="text" id="merchant-alias" required placeholder="@tu_alias_telegram o correo proton"
+            <input type="text" id="merchant-alias" required placeholder="tu_correo@ejemplo.com o @usuario_telegram"
               style="width: 100%; padding: 12px; background: #161616; border: 1px solid var(--border-light); border-radius: 4px; color: #FFF;">
           </div>
 
-          <button type="submit" class="btn btn-primary" style="width: 100%;">
-            Generar Clave de Custodia Segura
+          <div style="margin-bottom: 20px;">
+            <label for="merchant-notes"
+              style="display: block; font-family: var(--font-mono); font-size: 0.78rem; color: #CCC; margin-bottom: 6px;">
+              TIPO DE COMERCIO O REFERENCIA APROXIMADA (OPCIONAL)
+            </label>
+            <input type="text" id="merchant-notes" placeholder="Ej: Papelería, tienda textil, cafetería... (opcional)"
+              style="width: 100%; padding: 12px; background: #161616; border: 1px solid var(--border-light); border-radius: 4px; color: #FFF;">
+          </div>
+
+          <button type="submit" id="btn-submit-merchant" class="btn btn-primary" style="width: 100%; padding: 14px;">
+            <span>Enviar Solicitud de Kit Custodio</span>
           </button>
         </form>
 
         <div id="generated-token-box"></div>
+
+        <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, 0.08); text-align: center;">
+          <p style="font-size: 0.78rem; color: #888; margin-bottom: 8px;">
+            ¿Prefieres redactar tú mismo el mensaje desde tu gestor de correo?
+          </p>
+          <a href="mailto:ceutanoseapaga@proton.me?subject=%5BSOLICITUD%20KIT%20CUSTODIO%5D%20Punto%20Colaborador%20Ceuta" class="btn btn-outline" style="font-size: 0.75rem; padding: 6px 14px;">
+            Escribir a ceutanoseapaga@proton.me
+          </a>
+        </div>
       </div>
     </div>
   </div>

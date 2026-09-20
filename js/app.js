@@ -183,25 +183,86 @@ class MerchantModal {
     });
 
     if (this.form) {
-      this.form.addEventListener('submit', (e) => {
+      this.form.addEventListener('submit', async (e) => {
         e.preventDefault();
-        const randToken = 'CUSTODIA-' + Math.random().toString(36).substring(2, 8).toUpperCase() + '-0511';
-        if (this.tokenDisplay) {
-          this.tokenDisplay.innerHTML = `
-            <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid #10B981; padding: 16px; border-radius: 4px; text-align: center; margin-top: 16px;">
-              <p style="font-family: var(--font-mono); color: #34D399; font-weight: 700; font-size: 1rem;">
-                SOLICITUD ANÓNIMA REGISTRADA
-              </p>
-              <p style="font-family: var(--font-mono); font-size: 0.8rem; color: #FFF; margin-top: 8px;">
-                Token de Custodia Cifrado: <strong style="color: #FFB3B3;">${randToken}</strong>
-              </p>
-              <p style="font-size: 0.75rem; color: #AAA; margin-top: 6px;">
-                Un enlace ciudadano depositará el paquete con las máscaras y el microvinilo antes del 1 de noviembre.
-              </p>
-            </div>
-          `;
+        
+        const submitBtn = document.getElementById('btn-submit-merchant') || this.form.querySelector('button[type="submit"]');
+        const originalBtnHtml = submitBtn ? submitBtn.innerHTML : '';
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = '<span>Transmitiendo solicitud cifrada...</span>';
         }
-        window.showToast('Petición de custodia anónima remitida.');
+
+        const neighborhood = document.getElementById('merchant-neighborhood')?.value || 'No especificada';
+        const alias = document.getElementById('merchant-alias')?.value || 'No especificado';
+        const notes = document.getElementById('merchant-notes')?.value || 'Sin notas adicionales';
+        const randToken = 'CUSTODIA-' + Math.random().toString(36).substring(2, 8).toUpperCase() + '-0511';
+
+        try {
+          const response = await fetch('https://formsubmit.co/ajax/ceutanoseapaga@proton.me', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+              _subject: `[SOLICITUD KIT CUSTODIO] ${neighborhood} · ${randToken}`,
+              _template: 'table',
+              _captcha: 'false',
+              'Barriada o Zona': neighborhood,
+              'Canal de Contacto (Alias o Email)': alias,
+              'Referencia o Comercio': notes,
+              'Token de Custodia': randToken,
+              'Fecha de Registro': new Date().toLocaleString('es-ES')
+            })
+          });
+
+          if (this.tokenDisplay) {
+            this.tokenDisplay.innerHTML = `
+              <div style="background: rgba(16, 185, 129, 0.12); border: 1px solid #10B981; padding: 18px; border-radius: 4px; text-align: center; margin-top: 16px;">
+                <p style="font-family: var(--font-mono); color: #34D399; font-weight: 700; font-size: 0.95rem; margin-bottom: 6px;">
+                  SOLICITUD TRANSMITIDA CON ÉXITO
+                </p>
+                <p style="font-size: 0.85rem; color: #FFF; margin: 6px 0;">
+                  Notificación enviada a la organización (<strong>ceutanoseapaga@proton.me</strong>).
+                </p>
+                <p style="font-family: var(--font-mono); font-size: 0.8rem; color: #FFB3B3; margin-top: 6px;">
+                  Identificador Criptográfico: <strong>${randToken}</strong>
+                </p>
+                <p style="font-size: 0.76rem; color: #AAA; margin-top: 8px; line-height: 1.5;">
+                  Un enlace ciudadano contactará contigo a través de tu alias/email para coordinar el depósito del paquete de máscaras y el microvinilo.
+                </p>
+              </div>
+            `;
+          }
+          this.form.reset();
+          if (submitBtn) {
+            submitBtn.style.display = 'none';
+          }
+          window.showToast('Solicitud enviada a ceutanoseapaga@proton.me');
+        } catch (err) {
+          // Si falla la red externa o hay bloqueo de adblocker, fallback inmediato
+          if (this.tokenDisplay) {
+            this.tokenDisplay.innerHTML = `
+              <div style="background: rgba(158, 27, 27, 0.15); border: 1px solid var(--accent-crimson); padding: 18px; border-radius: 4px; text-align: center; margin-top: 16px;">
+                <p style="font-family: var(--font-mono); color: #FF8F8F; font-weight: 700; font-size: 0.9rem; margin-bottom: 6px;">
+                  ENVÍO DIRECTO POR CORREO
+                </p>
+                <p style="font-size: 0.82rem; color: #CCC; margin-bottom: 12px;">
+                  No se pudo conectar con el servicio automático. Pulsa abajo para enviar tu solicitud directamente con tu aplicación de correo:
+                </p>
+                <a href="mailto:ceutanoseapaga@proton.me?subject=%5BSOLICITUD%20KIT%20CUSTODIO%5D%20${encodeURIComponent(neighborhood)}&body=Barriada:%20${encodeURIComponent(neighborhood)}%0AContacto:%20${encodeURIComponent(alias)}%0ANotas:%20${encodeURIComponent(notes)}%0AToken:%20${randToken}" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.8rem;">
+                  Abrir correo a ceutanoseapaga@proton.me
+                </a>
+              </div>
+            `;
+          }
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnHtml;
+          }
+          window.showToast('Pulsa el botón para enviar por correo directo.');
+        }
       });
     }
   }
