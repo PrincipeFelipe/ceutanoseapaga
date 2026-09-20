@@ -176,6 +176,16 @@
   text-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
 }
 
+.teaser-date {
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: clamp(1.6rem, 3.8vw, 2.6rem);
+  color: var(--accent-crimson, #9E1B1B);
+  letter-spacing: 0.3em;
+  font-weight: 700;
+  margin: -6px 0 2px;
+  text-shadow: 0 0 25px rgba(158, 27, 27, 0.65), 0 0 50px rgba(158, 27, 27, 0.25);
+}
+
 .teaser-substatus {
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
   font-size: 0.82rem;
